@@ -2,7 +2,8 @@ import React from 'react';
 
 const SimpleForm = () => {
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
         console.log('form submitted');
     }
     return (
