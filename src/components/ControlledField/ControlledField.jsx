@@ -6,10 +6,11 @@ const ControlledField = () => {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(email, password, "submitted");
+        console.log(name, email, password, "submitted");
     }
 
     const handlePasswordOnChange = e => {
@@ -28,9 +29,15 @@ const ControlledField = () => {
         console.log(e.target.value);
     }
 
+    const handleNameOnChange = e => {
+        setName(e.target.value);
+        console.log(e.target.value);
+    }
+
     return (
         <div>
             <form onSubmit={handleSubmit}>
+                <input type="text" onChange={handleNameOnChange} defaultValue={name} placeholder="Name"/>
                 <input type="email" onChange={handleEmailChange} defaultValue={email} name="email" id="" placeholder="Email" required /><br />
                 <input type="password" onChange={handlePasswordOnChange} defaultValue={password} name="password" id="" placeholder="Password" required /><br />
                 <input type="submit" value="Submit" />
