@@ -5,7 +5,20 @@ const ProductForm = () => {
 
     const handleProductSubmit = e => {
         e.preventDefault();
-        console.log('submitted');
+        
+
+        const name = e.target.name.value;
+        const price = e.target.price.value;
+        const quantity = e.target.quantity.value;
+        // console.log(name, price, quantity, 'submitted');
+
+        const newProduct = {
+            name: name,
+            price: price,
+            quantity: quantity
+        }
+
+        console.log(newProduct);
     }
 
     
