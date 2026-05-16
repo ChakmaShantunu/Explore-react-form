@@ -15,7 +15,7 @@ const ProductManagement = () => {
     return (
         <div>
             <ProductForm handleAddProduct={handleAddProduct}></ProductForm>
-            <ProductTable></ProductTable>
+            <ProductTable products={products}></ProductTable>
         </div>
     );
 };
