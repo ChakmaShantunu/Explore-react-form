@@ -1,3 +1,4 @@
+import Friend from "./Friend";
 import Special from "./Special";
 
 
@@ -6,6 +7,10 @@ const Cousin = ({ name }) => {
         <div>
             <h3>{name}</h3>
             <Special></Special>
+
+            {
+                name === 'Jojo' && <Friend></Friend>
+            }
         </div>
     );
 };
